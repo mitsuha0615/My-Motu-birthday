@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff1f5">
+<title>For Motu ❤️</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+  :root{
+    --rose:#e85d75;
+    --deep:#6f2638;
+    --ink:#351d26;
+    --cream:#fff8f5;
+    --pink:#fff0f4;
+    --gold:#d9a441;
+    --white:rgba(255,255,255,.82);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    color:var(--ink);
+    font-family:"DM Sans",system-ui,sans-serif;
+    background:
+      radial-gradient(circle at 10% 5%, #ffe2eb 0 13%, transparent 35%),
+      radial-gradient(circle at 90% 25%, #ffe9d8 0 12%, transparent 32%),
+      linear-gradient(145deg,#fff8f5,#fff0f5 52%,#fff8f2);
+    overflow-x:hidden;
+  }
+  .petals{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .petal{
+    position:absolute;top:-10vh;width:14px;height:20px;border-radius:80% 20% 80% 20%;
+    background:#f7a7ba;opacity:.5;animation:fall linear infinite;
+  }
+  @keyframes fall{to{transform:translate3d(90px,115vh,0) rotate(360deg)}}
+
+  .wrap{position:relative;z-index:1;max-width:860px;margin:auto;padding:20px}
+  section{
+    min-height:92vh;display:flex;align-items:center;justify-content:center;
+    padding:70px 0;
+  }
+  .card{
+    width:100%;background:var(--white);backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.9);border-radius:30px;
+    box-shadow:0 24px 70px rgba(111,38,56,.12);
+  }
+  .hero{text-align:center;padding:58px 26px}
+  .eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--rose);font-weight:700}
+  h1,h2{font-family:"Playfair Display",serif;margin:12px 0}
+  h1{font-size:clamp(44px,10vw,78px);line-height:.98;color:var(--deep)}
+  h2{font-size:clamp(32px,7vw,48px);color:var(--deep)}
+  p{line-height:1.75;font-size:16px}
+  .heart{
+    width:92px;height:92px;margin:18px auto 8px;border-radius:50%;
+    display:grid;place-items:center;background:#fff;box-shadow:0 15px 40px rgba(232,93,117,.22);
+    font-size:44px;animation:pulse 1.7s ease-in-out infinite;cursor:pointer;
+  }
+  @keyframes pulse{50%{transform:scale(1.08)}}
+  .hint{color:#8b6670;font-size:13px}
+  .btn{
+    border:0;border-radius:999px;padding:14px 21px;background:var(--deep);color:white;
+    font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 12px 25px rgba(111,38,56,.2);
+    transition:.2s transform,.2s box-shadow;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(111,38,56,.24)}
+  .letter{padding:36px}
+  .letter.closed .letter-body{display:none}
+  .envelope{
+    background:linear-gradient(145deg,#fff,#ffe9ef);border-radius:22px;padding:26px;
+    text-align:center;border:1px solid #ffd1dc;
+  }
+  .letter-body{margin-top:26px;background:#fffdfb;border-radius:20px;padding:28px 24px;border:1px solid #f5e7e4}
+  .letter-body p{white-space:pre-line}
+  .sign{font-family:"Playfair Display",serif;font-size:24px;color:var(--deep);margin-top:24px}
+  .reasons{padding:34px}
+  .reason-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+  .reason{
+    padding:20px;border-radius:20px;background:#fff;border:1px solid #f4dde3;
+    cursor:pointer;transition:.2s;min-height:118px;
+  }
+  .reason:hover{transform:translateY(-3px)}
+  .reason .answer{display:none;color:#76505b;margin-top:8px;font-size:14px;line-height:1.55}
+  .reason.open .answer{display:block}
+  .surprise{text-align:center;padding:48px 28px}
+  .gift{font-size:64px;cursor:pointer;display:inline-block;animation:float 2.2s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-9px) rotate(2deg)}}
+  .final{display:none;margin-top:25px}
+  .final.show{display:block;animation:appear .7s ease}
+  @keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .tiny{font-size:12px;color:#95747d}
+  .music-note{margin-top:16px;padding:12px;border-radius:14px;background:#fff5f7;font-size:13px;color:#79515d}
+  .footer{text-align:center;padding:10px 0 40px;color:#9a747d;font-size:12px}
+
+  @media(max-width:600px){
+    .wrap{padding:12px}
+    section{min-height:auto;padding:52px 0}
+    .hero{padding:54px 18px}
+    .letter,.reasons,.surprise{padding:24px 18px}
+    .reason-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="petals" aria-hidden="true">
+  <span class="petal" style="left:7%;animation-duration:10s;animation-delay:-2s"></span>
+  <span class="petal" style="left:22%;animation-duration:13s;animation-delay:-7s"></span>
+  <span class="petal" style="left:41%;animation-duration:11s;animation-delay:-4s"></span>
+  <span class="petal" style="left:63%;animation-duration:14s;animation-delay:-9s"></span>
+  <span class="petal" style="left:81%;animation-duration:12s;animation-delay:-5s"></span>
+  <span class="petal" style="left:93%;animation-duration:15s;animation-delay:-11s"></span>
+</div>
+
+<main class="wrap">
+  <section>
+    <div class="card hero">
+      <div class="eyebrow">A little birthday surprise</div>
+      <div class="heart" id="heart" title="Tap me">❤️</div>
+      <h1>Happy Birthday,<br>my love</h1>
+      <p>For the one I call <strong>Motu</strong> 🥹❤️</p>
+      <p class="hint">There are a few things waiting for you below…</p>
+      <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open your surprise ✨</button>
+    </div>
+  </section>
+
+  <section id="letter">
+    <div class="card letter">
+      <div class="envelope">
+        <div style="font-size:46px">💌</div>
+        <h2>A letter for you</h2>
+        <p class="hint">Tap the button. I wrote this just for you.</p>
+        <button class="btn" id="openLetter">Open my letter ❤️</button>
+      </div>
+      <div class="letter-body" id="letterBody">
+        <p><strong>Happy Birthday, my love ❤️🎂</strong>
+
+Last year, I wasn’t with you on your birthday, and this year, even though I’m yours and we’re together, I still feel a little sad that I can’t hold you in my arms today. 🥺❤️
+
+I wish you were here with me so I could just hug you tight, kiss you, and make you feel how much you mean to me. You deserve all the love, happiness, and beautiful things in the world.
+
+I hope this year brings you everything you wish for—and I hope I get to be beside you for many more birthdays to come. ❤️🫶🏻
+
+Happy birthday once again, Motu. I love you. ❤️</p>
+        <div class="sign">Forever yours,<br>Mitsuha ❤️</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="card reasons">
+      <div class="eyebrow">Tap each one</div>
+      <h2>Little reasons I love you</h2>
+      <p class="hint">Some things are too special to fit into one birthday message.</p>
+      <div class="reason-grid">
+        <div class="reason"><strong>01 · You make ordinary days special ✨</strong><div class="answer">Even the smallest moments feel better when they have you in them.</div></div>
+        <div class="reason"><strong>02 · You’re my comfort 🫂</strong><div class="answer">There’s something about you that makes me want to stay close a little longer.</div></div>
+        <div class="reason"><strong>03 · Your smile 🥰</strong><div class="answer">Yes, this one absolutely had to make the list.</div></div>
+        <div class="reason"><strong>04 · You’re my person ❤️</strong><div class="answer">And honestly, that’s my favorite reason of all.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card surprise">
+      <div class="eyebrow">One last thing…</div>
+      <div class="gift" id="gift">🎁</div>
+      <h2>There’s one more surprise</h2>
+      <p class="hint">Tap the gift.</p>
+      <button class="btn" id="reveal">Open it 💝</button>
+      <div class="final" id="final">
+        <div style="font-size:42px">🫂💋❤️</div>
+        <h2>Come here, Motu.</h2>
+        <p>I owe you the biggest birthday hug, the sweetest kiss, and a whole lot of love.</p>
+        <p><strong>Happy Birthday, my love. ❤️</strong></p>
+        <p class="tiny">Made with love by Mitsuha.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">A tiny corner of the internet made just for you ❤️</div>
+</main>
+
+<script>
+  const openLetter = document.getElementById('openLetter');
+  const letterBody = document.getElementById('letterBody');
+  openLetter.addEventListener('click', () => {
+    letterBody.classList.add('show');
+    openLetter.textContent = 'My letter is open ❤️';
+    openLetter.disabled = true;
+    letterBody.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  document.querySelectorAll('.reason').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('open'));
+  });
+
+  const reveal = () => {
+    document.getElementById('final').classList.add('show');
+    document.getElementById('reveal').style.display='none';
+    document.getElementById('gift').textContent='💖';
+  };
+  document.getElementById('reveal').addEventListener('click', reveal);
+  document.getElementById('gift').addEventListener('click', reveal);
+
+  document.getElementById('heart').addEventListener('click', () => {
+    document.getElementById('heart').textContent='💗';
+    setTimeout(()=>document.getElementById('heart').textContent='❤️',700);
+  });
+</script>
+</body>
+</html>
